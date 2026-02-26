@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #ffd6e8, #c77dff);
+    color: white;
+    cursor: none;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 30px 0;
+    line-height: 1.6;
+}
+
+/* Circle Frames */
+.circle-frame {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 5px solid white;
+    transition: 0.4s ease;
+}
+
+.circle-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Special glow for her photo */
+.highlight {
+    width: 220px;
+    height: 220px;
+    border: 6px solid hotpink;
+    box-shadow: 0 0 25px hotpink;
+}
+
+/* Hover effect */
+.circle-frame:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+/* Gallery Layout */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Continue Button */
+.continue-btn {
+    margin-top: 50px;
+    padding: 12px 35px;
+    border: none;
+    background: linear-gradient(45deg, #ff6ec7, #c77dff);
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.continue-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Music Notes */
+.note {
+    position: absolute;
+    font-size: 24px;
+    pointer-events: none;
+    animation: floatNote 1.5s ease-out forwards;
+}
+
+@keyframes floatNote {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-80px) scale(1.5);
+    }
+}
+/* Secret Button */
+.secret-btn {
+    margin-top: 30px;
+    padding: 10px 25px;
+    border: none;
+    background: white;
+    color: #c77dff;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.secret-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Secret Note Overlay */
+.note-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.note-box {
+    background: white;
+    color: #444;
+    padding: 40px;
+    max-width: 400px;
+    border-radius: 20px;
+    text-align: center;
+    animation: popIn 0.4s ease;
+}
+
+.note-box h2 {
+    margin-top: 0;
+}
+
+.note-box button {
+    margin-top: 20px;
+    padding: 8px 20px;
+    border: none;
+    background: #ff6ec7;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.6); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

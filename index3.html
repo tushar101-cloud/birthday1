@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Before the Chaos 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Before The Cats Take Over 🐾</h1>
+
+    <p>
+        Before the chaos begins…
+        I just wanted to make something that feels soft.
+    </p>
+
+    <!-- Her Photo -->
+    <div class="circle-frame highlight">
+        <img src="assets/animations/images/her.jpeg" alt="Her Photo">
+    </div>
+
+    <p>
+        You deserve to be celebrated in the sweetest way possible.
+    </p>
+
+    <!-- Cat Gallery -->
+    <div class="gallery">
+        <div class="circle-frame">
+            <img src="assets/animations/gifs/cat1.gif">
+        </div>
+        <div class="circle-frame">
+            <img src="assets/animations/gifs/cat2.gif">
+        </div>
+        <div class="circle-frame">
+            <img src="assets/animations/gifs/cat3.gif">
+        </div>
+        <div class="circle-frame">
+            <img src="assets/animations/gifs/cat4.gif">
+        </div>
+    </div>
+
+    <p>
+        Even the tiniest paws can bring the biggest comfort.
+        And today… they’re all here for you.
+    </p>
+
+    <!-- Secret Note Button -->
+    <button class="secret-btn" onclick="openNote()">
+        🔐 Secret Note
+    </button>
+
+    <button class="continue-btn" onclick="location.href='index4.html'">
+        Continue to Chaos ➜
+    </button>
+
+</div>
+
+<!-- Secret Note Popup -->
+<div class="note-overlay" id="noteOverlay">
+    <div class="note-box">
+        <h2>For You 💌</h2>
+        <p>
+            And one last thing before I say good bye ik you had a bad result of that jee exam but 
+            yk one good thing you tried well I didn't so you kinda did better than me.
+        </p>
+        <button onclick="closeNote()">Close</button>
+    </div>
+</div>
+
+<script src="js/cursor.js"></script>
+<script src="js/notes.js"></script>
+<script>
+function openNote() {
+    document.getElementById("noteOverlay").style.display = "flex";
+}
+
+function closeNote() {
+    document.getElementById("noteOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>

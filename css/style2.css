@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffd6e8, #e0c3fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Indie Flower', cursive;
+    overflow: hidden;
+}
+
+/* BOOK */
+.book {
+    width: 420px;
+    height: 520px;
+    position: relative;
+    perspective: 2000px;
+}
+
+/* PAGES */
+.page {
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        white,
+        white 28px,
+        #cce7ff 29px
+    );
+    position: absolute;
+    transform-origin: left;
+    transition: transform 1s ease-in-out;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 
+        0 15px 40px rgba(0,0,0,0.25),
+        inset -10px 0 20px rgba(0,0,0,0.05);
+}
+
+/* Content inside page */
+.page-content {
+    padding: 50px 40px;
+    text-align: center;
+}
+
+/* Final page layout */
+.final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.final h2 {
+    margin-top: 20px;
+}
+
+/* Buttons */
+.next-btn,
+.prev-btn {
+    position: absolute;
+    bottom: 40px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.next-btn {
+    right: 40px;
+    background: linear-gradient(45deg, #ff6ec7, #c77dff);
+}
+
+.prev-btn {
+    left: 40px;
+    background: #c77dff;
+}
+
+.continue-btn {
+    margin-top: 40px;
+    padding: 10px 28px;
+    border: none;
+    background: linear-gradient(45deg, #ff6ec7, #c77dff);
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.continue-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Cake */
+.cake {
+    width: 160px;
+    height: 100px;
+    background: #ff8fab;
+    border-radius: 15px;
+    position: relative;
+    margin-top: 40px;
+    box-shadow: 
+        inset 0 -12px #ff6f91,
+        0 15px 30px rgba(0,0,0,0.25);
+    animation: cakeBounce 1s ease forwards;
+}
+
+@keyframes cakeBounce {
+    0% { transform: scale(0.7); opacity: 0; }
+    60% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.candle {
+    width: 12px;
+    height: 45px;
+    background: white;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flame {
+    width: 16px;
+    height: 22px;
+    background: radial-gradient(circle, yellow 40%, orange 70%);
+    border-radius: 50%;
+    position: absolute;
+    top: -22px;
+    left: -2px;
+    animation: flicker 0.25s infinite alternate;
+    box-shadow: 0 0 20px 8px rgba(255, 200, 0, 0.5);
+}
+
+@keyframes flicker {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(1.15); opacity: 0.8; }
+}
